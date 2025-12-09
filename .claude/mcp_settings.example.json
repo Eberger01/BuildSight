@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "vercel": {
+      "transport": "http",
+      "url": "https://mcp.vercel.com"
+    },
+    "supabase":
+    {
+      "command": "npx",
+      "args":  [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:YOUR_PASSWORD@db.YOUR_PROJECT_REF.supabase.co:5432/postgres"
+      ],
+      "env": {
+        "SUPABASE_URL": "https://YOUR_PROJECT_REF.supabase.co",
+        "SUPABASE_ANON_KEY": "your_supabase_anon_key",
+        "SUPABASE_SERVICE_ROLE_KEY": "your_supabase_service_role_key"
+      },
+      "transport": "stdio"
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-linear"],
+      "env": {
+        "LINEAR_API_KEY": "your_linear_api_key"
+      },
+      "transport": "stdio"
+    },
+    "testsprite": {
+      "command": "npx",
+      "args": ["-y", "@testsprite/testsprite-mcp"],
+      "transport": "stdio"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "transport": "stdio"
+    }
+  }
+}

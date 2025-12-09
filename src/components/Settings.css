@@ -1,0 +1,191 @@
+.settings {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    animation: fadeIn var(--transition-base) ease-out;
+}
+
+.settings-header {
+    margin-bottom: var(--space-8);
+}
+
+.settings-header h2 {
+    margin-bottom: var(--space-2);
+}
+
+.settings-subtitle {
+    color: var(--dark-text-secondary);
+    font-size: 1.05rem;
+}
+
+.settings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.settings-section {
+    background: var(--dark-bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.settings-section h3 {
+    margin: 0 0 var(--space-5) 0;
+    font-size: 1.25rem;
+    color: var(--dark-text-primary);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) 0;
+    gap: var(--space-4);
+}
+
+.setting-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-info h4 {
+    margin: 0 0 var(--space-1) 0;
+    font-size: 1rem;
+    color: var(--dark-text-primary);
+    font-weight: 600;
+}
+
+.setting-info p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--dark-text-secondary);
+}
+
+.setting-value {
+    display: flex;
+    align-items: center;
+}
+
+.ai-status {
+    padding: var(--space-2) var(--space-4);
+    background: rgba(76, 175, 80, 0.15);
+    color: var(--success-400);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-base);
+    border-radius: var(--radius-full);
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--neutral-400);
+    transition: var(--transition-base);
+    border-radius: 50%;
+}
+
+.toggle input:checked+.toggle-slider {
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+    border-color: var(--primary-600);
+    box-shadow: 0 0 12px rgba(33, 150, 243, 0.3);
+}
+
+.toggle input:checked+.toggle-slider:before {
+    transform: translateX(24px);
+    background-color: white;
+}
+
+.toggle:hover .toggle-slider {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.toggle input:checked:hover+.toggle-slider {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+}
+
+.setting-select {
+    padding: var(--space-2) var(--space-4);
+    background: var(--dark-bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--dark-text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.setting-select:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.setting-select:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.settings-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .settings {
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-footer {
+        flex-direction: column;
+    }
+
+    .settings-footer .btn {
+        width: 100%;
+    }
+}
