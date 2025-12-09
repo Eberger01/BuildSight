@@ -1,7 +1,7 @@
 # BuildSight - AI-Powered Contractor Estimation Platform
 
 ![BuildSight Logo](https://img.shields.io/badge/BuildSight-AI%20Powered-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Base%20Complete-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-AI%20Integrated-success?style=for-the-badge)
 ![Framework](https://img.shields.io/badge/Framework-React%20%2B%20Vite-purple?style=for-the-badge)
 
 ## 🏗️ Overview
@@ -18,10 +18,15 @@ BuildSight is a modern, AI-powered contractor estimation and job tracking platfo
 
 ## ✨ Features
 
-### Current Features (Base Implementation)
+### Current Features
 
 - **📊 Dashboard**: Comprehensive overview of active jobs, pending estimates, and key metrics
 - **📝 Estimate Creator**: Beautiful form interface for creating new project estimates
+- **🤖 AI-Powered Estimation**: Automated cost estimation using Google Gemini 3 Pro
+  - Intelligent cost breakdown (materials, labor, permits, contingency)
+  - Timeline predictions based on project scope
+  - Risk assessment and AI recommendations
+  - Material suggestions for optimal project outcomes
 - **🔨 Job Tracking**: Monitor progress of active jobs with visual progress bars
 - **📷 Gallery**: Browse project photos organized by category
 - **⚙️ Settings**: Configure AI settings, camera options, and notifications
@@ -29,8 +34,9 @@ BuildSight is a modern, AI-powered contractor estimation and job tracking platfo
 
 ### Coming Soon
 
-- **🤖 AI Estimation (Gemini 3 Pro)**: Automated cost estimation powered by Google's Gemini 3 Pro
 - **📸 Camera Integration**: Take progress photos and site images directly in the app
+- **📄 PDF Export**: Download professional estimate PDFs
+- **💾 Draft Saving**: Save and resume estimates in progress
 - **📈 Advanced Analytics**: Detailed reporting and insights
 - **📱 Mobile App**: Native mobile applications for iOS and Android
 - **🔔 Real-time Notifications**: Push notifications for project updates
@@ -41,7 +47,7 @@ BuildSight is a modern, AI-powered contractor estimation and job tracking platfo
 - **Build Tool**: Vite
 - **Styling**: Vanilla CSS with custom design system
 - **Typography**: Inter & Outfit (Google Fonts)
-- **AI Engine**: Gemini 3 Pro (Planned)
+- **AI Engine**: Google Gemini 3 Pro (Active)
 - **State Management**: React Hooks
 
 ## 🎨 Design System
@@ -130,12 +136,12 @@ The production-ready files will be in the `dist` folder.
 - [x] Gallery placeholder
 - [x] Settings interface
 
-### Phase 2: AI Integration (Next)
-- [ ] Gemini 3 Pro API integration
-- [ ] AI-powered cost estimation
-- [ ] Material recommendations
-- [ ] Timeline predictions
-- [ ] Risk assessment
+### Phase 2: AI Integration ✅ (Complete)
+- [x] Gemini 3 Pro API integration
+- [x] AI-powered cost estimation
+- [x] Material recommendations
+- [x] Timeline predictions
+- [x] Risk assessment
 
 ### Phase 3: Camera & Media
 - [ ] Camera API integration
@@ -197,6 +203,6 @@ Proprietary - All rights reserved
 
 ---
 
-**Note**: This is the base implementation of BuildSight. AI estimation and camera features will be implemented in future releases. The current version provides a beautiful, functional foundation for the platform.
+**Note**: BuildSight now features fully integrated AI estimation powered by Google Gemini 3 Pro. The platform provides intelligent cost estimation, timeline predictions, and AI-driven recommendations for contractor projects.
 
-**Current Status**: ✅ Base UI Complete | 🔄 AI Integration Pending | 🔄 Camera Integration Pending
+**Current Status**: ✅ Base UI Complete | ✅ AI Integration Complete | 🔄 Camera Integration Pending | 🔄 PDF Export Pending
